@@ -21,23 +21,23 @@ h1, h2 {
     font-weight: bold;
 }
 
+h1 {
+font-size: 2.5rem;
+}
+
 h2 {
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 p {
-    font-size: 16px;
-}
-
-nav a {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 1rem;
 }
 
 main {
+    width: 90%;
     max-width: 1300px;
-    margin: 0;
-    padding: 2rem;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
 section {
@@ -49,33 +49,38 @@ section {
 nav {
     background-color: #f1e7dc;
     padding: 1rem 2rem;
-    text-align: left;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 nav a {
     color: #5a3825;
     text-decoration: none;
-    margin-right: 2rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 0.5rem 0.75rem;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-footer {
-    background-color: #855f42;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
 img {
+    display: block;
     max-width: 100%;
     height: auto;
     border: 3px solid #e6b689;
     border-radius: 8px;
     margin-top: 1rem;
+}
+
+.table-wrap {
+    overflow-x: auto;
 }
 
 table {
@@ -93,4 +98,24 @@ th, td {
 th {
     background-color: #f0dfcf;
     font-weight: bold;
+}
+
+footer {
+    background-color: #855f42;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 700px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+#descriptions {
+    grid-column: 1 / -1;
 }
