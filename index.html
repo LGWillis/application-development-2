@@ -81,6 +81,56 @@
                 </div>
             </section>
 
+            <section id="order">
+                <h2>Place a Cookie Order</h2>
+                <p>Fill out the form below to request an order of Luke's Cookies.</p>
+                <form id="order-form">
+                    <label for="customer-name">Name:</label>
+                    <input id="customer-name" name="customerName" type="text">
+
+                    <label for="customer-email">Email:</label>
+                    <input id="customer-email" name="customerEmail" type="email">
+                    <label for="cookie-flavor">Cookie flavor:</label>
+                    <select id="cookie-flavor" name="cookieFlavor">
+                        <option value="">Choose a cookie</option>
+                        <option value="Brown Butter Chocolate Chip">Brown Butter Chocolate Chip</option>
+                        <option value="Oatmeal Chocolate Chip">Oatmeal Chocolate Chip</option>
+                        <option value="Biscoff White Chocolate Chip">Biscoff White Chocolate Chip</option>
+                        <option value="White Chocolate Raspberry">White Chocolate Raspberry</option>
+                        <option value="Peanut Butter Cup Cookie">Peanut Butter Cup Cookie</option>
+                    </select>
+
+                    <label for="quantity">Quantity:</label>
+                    <input id="quantity" name="quantity" type="number" min="1" max="24">
+
+                    <label for="pickup-date">Pickup date:</label>
+                    <input id="pickup-date" name="pickupDate" type="date">
+
+                    <fieldset>
+                        <legend>How would you like to receive your order?</legend>
+
+                        <input id="pickup" name="orderType" type="radio" value="Pickup">
+                        <label for="pickup">Pickup</label>
+
+                        <input id="delivery" name="orderType" type="radio" value="Campus Delivery">
+                        <label for="delivery">Campus Delivery</label>
+                    </fieldset>
+
+                    <label for="special-instructions">Special instructions:</label>
+                    <textarea id="special-instructions" name="specialInstructions"></textarea>
+
+                    <div>
+                        <input id="confirm-order" name="confirmOrder" type="checkbox">
+                        <label for="confirm-order">I confirm my order details.</label>
+                    </div>
+
+                    <button type="submit">Place Order</button>
+
+                    <p id="order-message"></p>
+
+                </form>
+            </section>
+
             <section id="suggestions">
                 <h2>Suggest a Cookie!</h2>
                 <p>Have an idea for a cookie you'd want to see at Luke's Cookies?
