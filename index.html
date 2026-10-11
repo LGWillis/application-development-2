@@ -101,7 +101,7 @@
                     </select>
 
                     <label for="quantity">Quantity:</label>
-                    <input id="quantity" name="quantity" type="number" min="1" max="24">
+                    <input id="quantity" name="quantity" type="number" min="1" max="12">
 
                     <label for="pickup-date">Pickup date:</label>
                     <input id="pickup-date" name="pickupDate" type="date">
@@ -147,6 +147,29 @@
                 <ul id="suggestion-list"></ul>
             </section>
             
+            <section id ="api-tester">
+                <h2>API Test</h2>
+                <p> Create and retrieve data with JSONPlaceholder.</p>
+
+                <h3>Posts from the API</h3>
+                <p id="api-get-status">Loading posts</p>
+                <button id="load-posts-button" type="button">Reload Posts</button>
+                <ul id="api-post-list"></ul>
+
+                <h3>Create a Test Post</h3>
+                <form id="api-post-form">
+                    <label for="api-post-title">Post title:</label>
+                    <input id="api-post-title" name="title" type="text" maxlength="100" required>
+
+                    <label for="api-post-body">Post message:</label>
+                    <textarea id="api-post-body" name="body" maxlength="1000" required></textarea>
+
+                    <button id="create-post-button" type="submit">Send POST Request</button>
+                </form>
+
+                <p id="api-post-status">No post submitted yet.</p>
+                <div id="created-post-result"></div>
+            </section>
         </main>
         <footer>
             <p>Luke's Cookies | 2026</p>
